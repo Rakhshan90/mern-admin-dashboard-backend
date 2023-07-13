@@ -7,7 +7,8 @@ const UserSchema = new mongoose.Schema(
         password: { type: String, required: true },
         //users cannot be an admin
         isAdmin: { type: Boolean, default: false },
-        img: { type: String }
+        phone: { type: Number },
+        address: { type: String },
     },
 
     //timestamps used to create current date and time as well as updates.

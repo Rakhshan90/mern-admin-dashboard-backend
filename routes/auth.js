@@ -12,6 +12,8 @@ router.post('/register', async(req, res)=>{
         // password: req.body.password,
         //so here i've used cryptoJS to secure my users password
         password: CryptoJS.AES.encrypt(req.body.password, process.env.PASS_SEC).toString(),
+        phone : req.body.phone,
+        address: req.body.address,
     });
 
     //Trying to store users credentials in our DB asynchronously
